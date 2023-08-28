@@ -1,0 +1,2 @@
+I chose an abstract class pattern above interface, because shape is about state, but not an action.
+ Moreover, logically, if we assume the classes to be extended, they may obtain such properties as number of angles, for instance, which will be original for each class. Constant fields pattern of interface is not appropriate for this.

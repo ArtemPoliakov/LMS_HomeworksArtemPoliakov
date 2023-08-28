@@ -1,0 +1,1 @@
+Hello! My name's Artem Poliakov, I'm 16 and I'm from Kharkiv, Ukraine. This repository contains my GoIT homeworks.
