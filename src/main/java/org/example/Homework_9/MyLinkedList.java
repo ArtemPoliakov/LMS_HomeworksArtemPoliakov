@@ -3,7 +3,7 @@ package org.example.Homework_9;
 import java.io.Serializable;
 
 public class MyLinkedList <E> implements Cloneable, Serializable {
-    private class Node <E> {
+    private class Node {
         private E value;
         private Node previous;
         private Node next;

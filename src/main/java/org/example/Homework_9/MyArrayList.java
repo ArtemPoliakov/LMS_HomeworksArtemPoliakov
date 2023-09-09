@@ -37,8 +37,8 @@ public class MyArrayList <E> implements RandomAccess, Cloneable, Serializable{
        }
     }
     public void add(E value){
-       if(dataSize==data.length){
-           data = Arrays.copyOf(data, dataSize+1);
+       if(dataSize>=data.length){
+           data = Arrays.copyOf(data, dataSize+10);
        }
         data[dataSize] = value;
         dataSize++;
@@ -48,7 +48,9 @@ public class MyArrayList <E> implements RandomAccess, Cloneable, Serializable{
            if(index>dataSize) {
                throw new ArrayIndexOutOfBoundsException("ArrayList index " + index + " is out of range for capacity " + dataSize);
            }
-           data = Arrays.copyOf(data, dataSize+1);
+           if(dataSize>=data.length){
+               data = Arrays.copyOf(data, dataSize+10);
+           }
            dataSize++;
            System.arraycopy(data, index, data, index+1, dataSize-index-1);
            data[index] = value;
