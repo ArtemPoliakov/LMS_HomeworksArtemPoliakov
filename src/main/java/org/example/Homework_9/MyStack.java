@@ -1,14 +1,6 @@
 package org.example.Homework_9;
 
 public class MyStack <E> {
-    private class Node{
-        private Node next;
-        private Node previous;
-        private E value;
-        public Node(E value){
-            this.value = value;
-        }
-    }
     private Node front;
     private Node rear;
     private int length;
@@ -101,6 +93,14 @@ public class MyStack <E> {
             }
         }
         return temp;
+    }
+    private class Node{
+        private Node next;
+        private Node previous;
+        private E value;
+        public Node(E value){
+            this.value = value;
+        }
     }
 }
 

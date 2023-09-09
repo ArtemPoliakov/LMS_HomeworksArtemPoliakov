@@ -56,7 +56,7 @@ public class MyArrayList <E> implements RandomAccess, Cloneable, Serializable{
            data[index] = value;
        }
        public void remove(int index){
-           if(index>=dataSize) {
+           if(index<0 && index>=dataSize) {
                throw new ArrayIndexOutOfBoundsException("ArrayList index " + index + " is out of range for capacity " + dataSize);
            }
            dataSize--;

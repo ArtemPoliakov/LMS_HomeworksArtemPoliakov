@@ -3,16 +3,6 @@ package org.example.Homework_9;
 import java.io.Serializable;
 
 public class MyLinkedList <E> implements Cloneable, Serializable {
-    private class Node {
-        private E value;
-        private Node previous;
-        private Node next;
-
-        public Node(E value){
-            this.value = value;
-        }
-    }
-
     private Node head;
     private Node tail;
     private int length;
@@ -128,5 +118,14 @@ public class MyLinkedList <E> implements Cloneable, Serializable {
             }
         }
         return temp;
+    }
+    private class Node {
+        private E value;
+        private Node previous;
+        private Node next;
+
+        public Node(E value){
+            this.value = value;
+        }
     }
 }

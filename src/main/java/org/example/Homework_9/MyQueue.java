@@ -1,15 +1,6 @@
 package org.example.Homework_9;
 
 public class MyQueue <E> {
-    private class Node {
-        private E value;
-        private Node next;
-
-        public Node(E value) {
-            this.value = value;
-        }
-    }
-
     private Node front;
     private Node rear;
     private int length;
@@ -82,5 +73,13 @@ public class MyQueue <E> {
         builder.delete(builder.length() - 3, builder.length());
         builder.append("]");
         return String.valueOf(builder);
+    }
+    private class Node {
+        private E value;
+        private Node next;
+
+        public Node(E value) {
+            this.value = value;
+        }
     }
 }

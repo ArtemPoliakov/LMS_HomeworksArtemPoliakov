@@ -3,33 +3,6 @@ package org.example.Homework_9;
 import java.util.Arrays;
 
 public class MyHashMap <K,V>{
-    private static class Entry<K,V>{
-        private K key;
-        private V value;
-        private Entry<K,V> next;
-        public Entry(K key, V value){
-            this.key = key;
-            this.value = value;
-        }
-        @Override
-        public String toString(){
-            if(this!=null) {
-                StringBuilder result = new StringBuilder();
-                Entry<K, V> temp = this;
-                while(temp!=null){
-                    result.append(temp.key + " = " + temp.value);
-                    if(temp.next!=null){
-                        result.append(", ");
-                    }
-                    temp = temp.next;
-                }
-                return result.toString();
-            } else{
-                return "";
-            }
-        }
-    }
-
     private static final int DEFAULT_CAPACITY = 8;
     private static final Entry[] EMPTY = new Entry[0];
     private static final double ENLARGEMENT_PERCENTAGE_BOUND = 75;
@@ -114,5 +87,32 @@ public class MyHashMap <K,V>{
     @Override
     public String toString(){
         return Arrays.toString(entries).replaceAll("(, null(?! = ))|(?<! = )null,( ?)", "");
+    }
+
+    private static class Entry<K,V>{
+        private K key;
+        private V value;
+        private Entry<K,V> next;
+        public Entry(K key, V value){
+            this.key = key;
+            this.value = value;
+        }
+        @Override
+        public String toString(){
+            if(this!=null) {
+                StringBuilder result = new StringBuilder();
+                Entry<K, V> temp = this;
+                while(temp!=null){
+                    result.append(temp.key + " = " + temp.value);
+                    if(temp.next!=null){
+                        result.append(", ");
+                    }
+                    temp = temp.next;
+                }
+                return result.toString();
+            } else{
+                return "";
+            }
+        }
     }
 }
