@@ -4,10 +4,81 @@ import org.example.Homework_8.Circle;
 import org.example.Homework_8.ShapeProcessor;
 import org.example.Homework_9.*;
 
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        String text = "Test text";
+        File file = new File("C:\\Users\\apoli\\Desktop\\TestFile.txt");
+        try(FileOutputStream outputStream = new FileOutputStream(file, true)){
+            byte[] array = text.getBytes();
+            for (int i = 0; i < array.length; i++) {
+                outputStream.write(array[i]);
+            }
+        } catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+
+//        try {
+//            FileInputStream stream = new FileInputStream("C:/Users/apoli/Desktop/TestFile.txt");
+//            byte[] array = new byte[stream.available()];
+//            stream.read(array);
+//            System.out.println(new String(array));
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        } finally{
+//           stream.close();
+//           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
